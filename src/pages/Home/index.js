@@ -35,6 +35,8 @@ class Home extends Component {
     const { addToCartRequest } = this.props;
 
     addToCartRequest(id);
+    // Since this is a saga function, we can't use await in order to redirect the user
+    // after we do all the checks in the saga.
   };
 
   render() {
